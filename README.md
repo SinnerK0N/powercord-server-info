@@ -9,9 +9,9 @@ A Powercord plugin. Get information about a server that you're in. <br /><br />
 5. Open Settings
 6. Go to Plugins in Powercord settings
 7. Click on the 3 dots and then click on `Load missing plugins` <br />
-![Visual reference for point 7](https://krypt0n.eu/sharex/UjrfUpX6MD.png) <br />
+![Visual reference for point 7](https://krypt0n.eu/res/pc-svinfo/lms.png) <br />
 8. A popup like shown below should appear <br />
-![Visual reference for point 8](https://krypt0n.eu/sharex/NHhkbNTgFA.png)<br />
+![Visual reference for point 8](https://krypt0n.eu/res/pc-svinfo/popup.png) <br />
 And you are done. <br /><br />
 
 ## Troubleshooting
