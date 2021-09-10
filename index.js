@@ -4,7 +4,7 @@ const {getModule} = webpack
 
 const DISCORD_EPOCH = 1420070400000
 const DISCORD_TIMESTAMP_BITSHIFT = 22
-const PREFERRED_ICON_SIZE = 128
+const PREFERRED_ICON_SIZE = 512
 const MS_PER_DAY = 86400000
 
 module.exports = class ServerInfo extends Plugin {
@@ -139,8 +139,8 @@ module.exports = class ServerInfo extends Plugin {
 				title: guild.name,
 				description:
 					`ID: **${guild.id}**`
-					+`\nCreated on **${this.getReadableTime(this.getSnowflakeDate(guild.id))}**, ${this.getDaysAgo(this.getSnowflakeDate(guild.id).getTime())}`
-					+`\nYou joined on **${this.getReadableTime(guild.joinedAt)}**, ${this.getDaysAgo(guild.joinedAt.getTime())}`
+					+`\nCreated on **${this.getReadableTime(this.getSnowflakeDate(guild.id))}**, (${this.getDaysAgo(this.getSnowflakeDate(guild.id).getTime())})`
+					+`\nYou joined on **${this.getReadableTime(guild.joinedAt)}**, (${this.getDaysAgo(guild.joinedAt.getTime())})`
 					+`\n**${getMemberCount(guild.id)}** members`
 					+boostString
 					+`\nVoice region **${guild.region}**`
