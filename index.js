@@ -55,18 +55,15 @@ module.exports = class ServerInfo extends Plugin {
 
 	async executeCommand() {
 		const getGuild = (await getModule(["getGuild"])).getGuild
+		const getGuildId = (await getModule(["getGuildId", "getLastSelectedGuildId"], "getGuildId")).getGuildId
 		const getUser = (await getModule(["getUser", "setFlag"])).getUser
 		const getMemberIds = (await getModule(["getMemberIds"])).getMemberIds
 		const getMemberCount = (await getModule(["getMemberCount"])).getMemberCount
-		const getChannel = (await getModule(["getChannel"])).getChannel
-		const getChannelId = webpack.channels.getChannelId
 		const isFriend = (await getModule(["isFriend"])).isFriend
 		
-		const channelID = getChannelId()
-		const channel = getChannel(channelID)
-		if (channel.guild_id) {
+		if (getGuildId()) {
 
-		const guild = getGuild(channel.guild_id)
+		const guild = getGuild(getGuildId())
 
 		const fields = []
 
